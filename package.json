@@ -1,0 +1,41 @@
+{
+  "name": "reservia-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "test": "NODE_ENV=test npx jest --verbose --runInBand",
+    "build:prod": "rimraf dist && tsc --sourceMap -p ./",
+    "start:dev": "ts-node --files ./src/index.ts",
+    "start-build-prod": "npm run build:prod && npm run start",
+    "start:watch": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^26.0.13",
+    "dotenv": "^8.2.0",
+    "dropbox-v2-api": "^2.4.26",
+    "fastify": "^3.3.0",
+    "fastify-blipp": "^3.0.0",
+    "fastify-cors": "^4.1.0",
+    "fastify-multer": "^2.0.2",
+    "fastify-plugin": "^2.3.3",
+    "fastify-static": "^3.2.0",
+    "googleapis": "^59.0.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.6.4",
+    "nodemon": "^2.0.4"
+  }
+}

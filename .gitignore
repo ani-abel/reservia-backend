@@ -1,0 +1,5 @@
+# Do not commit the built version of the App
+#dist
+
+# Do not commit node_modules
+node_modules
